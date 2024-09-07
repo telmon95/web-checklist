@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Checklist</title>
+    <link rel="stylesheet" href="styling.css"> <!-- corrected filename -->
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <h1>Audio Visual & Video Conferencing(AV/VC) Checklist</h1>
+
+        <label for="technicianName">Technician Name</label>
+        <select name="technicianName" id="technicianName">
+            <option value="" disabled selected>Select option</option>
+            <option value="Technician 1">Gerald Mashabane</option>
+            <option value="Technician 2">Technician 2</option>
+            <option value="Technician 3">Technician 3</option>
+            <option value="Technician 4">Technician 4</option>
+        </select>
+
+        <label for="date">Checklist Date</label>
+        <input type="date" name="date" id="date">
+
+        <label for="title">Checklist Title</label>
+        <input type="text" name="title" id="title" placeholder="Enter Title">
+
+        <h2>Checks Performed</h2>
+        <h3>Software</h3>
+        <label>Is Creston Panel signed in?</label>
+        <input type="checkbox" name="creston" value="Yes">
+
+        <label>Is Room signed in?</label>
+        <input type="checkbox" name="room" value="Yes">
+
+        <label>Is Teams dialing?</label>
+        <input type="checkbox" name="teams" value="Yes">
+
+        <h3>Hardware</h3>
+        <label>Is audio working?</label>
+        <input type="checkbox" name="audio" value="Yes">
+
+        <label>Is touch panel working?</label>
+        <input type="checkbox" name="panel" value="Yes">
+
+        <label>Screen sharing?</label>
+        <input type="checkbox" name="screen" value="Yes">
+
+        <label>Room sound?</label>
+        <input type="checkbox" name="sound" value="Yes">
+
+        <label>Projector on?</label>
+        <input type="checkbox" name="projector" value="Yes">
+
+        <label>Room Camera on?</label>
+        <input type="checkbox" name="camera" value="Yes">
+
+        <label>Television on?</label>
+        <input type="checkbox" name="television" value="Yes">
+
+        <h2>Escalation</h2>
+        <label for="escalationName">Escalation Required</label>
+        <select name="escalationName" id="escalationName" onchange="toggleTextbox(this.value)"> <!-- added onchange -->
+            <option value="" disabled selected>Select option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <div id="textbox-container" style="display: none;">
+            <label for="escalationDetails">Please provide escalation details:</label>
+            <input type="text" id="escalationDetails" name="escalationDetails">
+        </div>
+
+        <button type="submit">Send & Escalate</button>
+    </form>
+
+    <h2>Checklist Confirmation</h2>
+    <label for="confirmationName">Please select your name</label>
+    <select name="confirmationName" id="confirmationName">
+        <option value="" disabled selected>Select option</option>
+        <option value="Gerald Mashabane">Gerald Mashabane</option>
+        <option value="Technician 2">Technician 2</option>
+        <option value="Technician 3">Technician 3</option>
+        <option value="Technician 4">Technician 4</option>
+    </select>
+
+    <p>Hereby confirm that the above check was confirmed and the required escalations processed.</p>
+
+    <div class="button-container">
+        <button type="submit">Save & Close</button>
+    </div>
+
+    <script>
+        function toggleTextbox(value) {
+            const textboxContainer = document.getElementById('textbox-container');
+            if (value === 'Yes') {
+                textboxContainer.style.display = 'block';
+            } else {
+                textboxContainer.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

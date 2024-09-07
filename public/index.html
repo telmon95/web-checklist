@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Checklist</title>
+    <!-- Link to external CSS stylesheet for styling the page -->
     <link rel="stylesheet" href="styling.css">
 </head>
 <body>
+    <!-- Main form for submitting the checklist -->
     <form action="/submit" method="POST">
-        <h1>Audio Visual & Video Conferencing(AV/VC) Checklist</h1>
+        <h1>Audio Visual & Video Conferencing (AV/VC) Checklist</h1>
 
+        <!-- Dropdown for selecting the technician's name -->
         <label for="technicianName">Technician Name</label>
         <select name="technicianName" id="technicianName">
             <option value="" disabled selected>Select option</option>
@@ -19,14 +22,18 @@
             <option value="Technician 4">Technician 4</option>
         </select>
 
+        <!-- Input field for selecting the date of the checklist -->
         <label for="date">Checklist Date</label>
         <input type="date" name="date" id="date">
 
+        <!-- Input field for entering the title of the checklist -->
         <label for="title">Checklist Title</label>
         <input type="text" name="title" id="title" placeholder="Enter Title">
 
         <h2>Checks Performed</h2>
+
         <h3>Software</h3>
+        <!-- Checkboxes for various software checks -->
         <label>Is Creston Panel signed in?</label>
         <input type="checkbox" name="creston" value="Yes">
 
@@ -37,6 +44,7 @@
         <input type="checkbox" name="teams" value="Yes">
 
         <h3>Hardware</h3>
+        <!-- Checkboxes for various hardware checks -->
         <label>Is audio working?</label>
         <input type="checkbox" name="audio" value="Yes">
 
@@ -59,6 +67,7 @@
         <input type="checkbox" name="television" value="Yes">
 
         <h2>Escalation</h2>
+        <!-- Dropdown for selecting if escalation is required -->
         <label for="escalationName">Escalation Required</label>
         <select name="escalationName" id="escalationName" onchange="toggleTextbox(this.value)">
             <option value="" disabled selected>Select option</option>
@@ -66,15 +75,19 @@
             <option value="No">No</option>
         </select>
 
+        <!-- Container for escalation details, initially hidden -->
         <div id="textbox-container" style="display: none;">
             <label for="escalationDetails">Please provide escalation details:</label>
             <input type="text" id="escalationDetails" name="escalationDetails">
         </div>
 
+        <!-- Submit button for sending and escalating -->
         <button type="submit">Send & Escalate</button>
     </form>
 
+    <!-- Checklist Confirmation Section -->
     <h2>Checklist Confirmation</h2>
+    <!-- Dropdown for selecting the technician's name for confirmation -->
     <label for="confirmationName">Please select your name</label>
     <select name="confirmationName" id="confirmationName">
         <option value="" disabled selected>Select option</option>
@@ -84,19 +97,22 @@
         <option value="Technician 4">Technician 4</option>
     </select>
 
+    <!-- Confirmation text -->
     <p>Hereby confirm that the above check was confirmed and the required escalations processed.</p>
 
+    <!-- Button container with Save & Close button -->
     <div class="button-container">
         <button type="submit">Save & Close</button>
     </div>
 
+    <!-- JavaScript function to toggle the display of escalation details -->
     <script>
         function toggleTextbox(value) {
             const textboxContainer = document.getElementById('textbox-container');
             if (value === 'Yes') {
-                textboxContainer.style.display = 'block';
+                textboxContainer.style.display = 'block'; // Show details container
             } else {
-                textboxContainer.style.display = 'none';
+                textboxContainer.style.display = 'none'; // Hide details container
             }
         }
     </script>

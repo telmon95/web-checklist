@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styling.css">
 </head>
 <body>
+
+    <!-- Bold centered title -->
+    <h1 class="page-title">Audio Visual & Video Conferencing (AV/VC)</h1>
+
     <!-- Main form for submitting the checklist -->
     <form action="/submit" method="POST">
         <h1>Audio Visual & Video Conferencing (AV/VC) Checklist</h1>
@@ -26,10 +30,16 @@
         <label for="date">Checklist Date</label>
         <input type="date" name="date" id="date">
 
-        <!-- Input field for entering the title of the checklist -->
+        <!-- Select options for Room Number -->
         <label for="title">Room Number</label>
-        <input type="text" name="title" id="title" placeholder="Enter Room no.">
-
+        <select name="technicianName" id="technicianName">
+            <option value="" disabled selected>Select option</option>
+            <option value="Auditorium">Auditorium</option>
+            <option value="GM3">GM3</option>
+            <option value="1M1">1M1</option>
+            <option value="TP Room">TP Room</option>
+        </select>
+        
         <h2>Checks Performed</h2>
 
         <h3>Software</h3>
@@ -120,7 +130,6 @@
             }
         }
     </script>
-
 
 </body>
 </html>

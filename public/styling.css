@@ -2,16 +2,17 @@
 body {
     font-family: 'Arial', sans-serif; /* Font and fallback */
     font-size: 13px; /* Base font size */
-    background-color: #f0f0f0; /* Background color */
-    color: #333; /* Text color */
+    background-color: #000; /* Black background */
+    color: #d3d3d3; /* Light gray text color */
     background-image: url('investec.jpg'); /* Background image */
     background-size: cover; /* Cover image */
     background-repeat: no-repeat; /* No repeat */
     background-position: center center; /* Center image */
     display: flex; /* Flexbox layout */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 160vh; /* Height */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Full viewport height */
     margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
 }
@@ -22,16 +23,19 @@ form {
     padding: 20px; /* Padding */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
-    width: 200px; /* Width */
+    width: 80%; /* Width of form */
+    max-width: 500px; /* Max width for form */
     text-align: left; /* Left-align text */
     position: relative; /* Positioning context */
+    margin-bottom: 60px; /* Space from bottom for button container */
 }
 
 /* Main heading styling */
 h1 {
     text-align: center; /* Center heading */
-    color: #333; /* Heading color */
+    color: #000000; /* Light gray heading color */
     margin-bottom: 20px; /* Space below */
+    font-size: 18px; /* Font size */
 }
 
 /* Label styling */
@@ -39,7 +43,8 @@ label {
     display: block; /* Block-level labels */
     font-weight: bold; /* Bold text */
     margin-bottom: 19px; /* Space below */
-    color: #555; /* Label color */
+    color: #000000; /* Light gray label color */
+    font-size: 15px; /* Font size */
 }
 
 /* Input and select styling */
@@ -50,29 +55,28 @@ select {
     width: 100%; /* Full width */
     padding: 10px; /* Padding */
     margin-bottom: 15px; /* Space below */
-    border: 1px solid #ccc; /* Border */
+    border: 1px solid #000000; /* Border */
     border-radius: 5px; /* Rounded corners */
-    font-size: 14px; /* Font size */
+    font-size: 18px; /* Font size */
 }
 
 /* Checkbox styling */
 input[type="checkbox"] {
-    margin-right: 05px; /* Space to right */
+    margin-right: 5px; /* Space to right */
 }
 
 /* Button container styling */
 .button-container {
-    position: absolute; /* Absolute positioning */
-    bottom: 20px; /* Distance from bottom */
-    right: 20px; /* Distance from right */
     display: flex; /* Flexbox layout */
     gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Space above */
 }
 
 /* Button styling */
 button {
     background-color: #28a745; /* Button background */
-    color: white; /* Text color */
+    color: rgb(0, 0, 0); /* Text color */
     padding: 10px 20px; /* Padding */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
@@ -87,14 +91,14 @@ button:hover {
 
 /* Subheading styling */
 h2, h3 {
-    color: #333; /* Color */
+    color: #000000; /* Light gray color */
     margin-bottom: 5px; /* Space below */
 }
 
 /* Paragraph styling */
 p {
-    font-size: 14px; /* Font size */
-    color: #333; /* Color */
+    font-size: 20px; /* Font size */
+    color: #000000; /* Light gray color */
 }
 
 /* Footer styling */
@@ -102,11 +106,21 @@ p {
     font-size: 0.9em; /* Font size */
     text-align: center; /* Center text */
     margin-top: 20px; /* Space above */
-    color: #666; /* Color */
+    color: #060505; /* Light gray color */
 }
 
 /* Escalation details container */
 #textbox-container {
     display: none; /* Hidden by default */
     margin-top: 10px; /* Space above */
+}
+
+/* Page title styling */
+.page-title {
+    text-align: center; /* Center the text horizontally */
+    font-weight: bold; /* Make the text bold */
+    font-size: 30px; /* Adjust the font size */
+    padding-top: 20px; /* Add some space from the top */
+    color: #080808; /* Light gray color */
+    margin-bottom: 20px; /* Space below */
 }

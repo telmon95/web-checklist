@@ -124,3 +124,28 @@ p {
     color: #080808; /* Light gray color */
     margin-bottom: 20px; /* Space below */
 }
+
+/* Styling for the confirmation text */
+.confirmation-text {
+    font-style: italic; /* Italicize the text */
+    background-color: #ffffff; /* Highlight color (yellow) */
+    padding: 5px; /* Padding for better visibility */
+    border-radius: 3px; /* Rounded corners for the highlight */
+    color: #000; /* Text color */
+}
+
+/* Container for confirmation text and checkbox */
+.confirmation-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styling for the confirmation text */
+.confirmation-text {
+    font-style: italic; /* Italicize the text */
+    background-color: #d7dfae; /* Highlight color (yellow) */
+    padding: 5px; /* Padding for better visibility */
+    border-radius: 3px; /* Rounded corners for the highlight */
+    color: #000; /* Text color */
+    margin-left: 10px; /* Space between checkbox and text */
+}

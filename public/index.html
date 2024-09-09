@@ -107,12 +107,15 @@
         <option value="Technician 4">Technician 4</option>
     </select>
 
-    <!-- Confirmation text -->
-    <p>Hereby confirm that the above check was confirmed and the required escalations processed.</p>
+    <!-- Confirmation text and checkbox container -->
+    <div class="confirmation-container">
+        <input type="checkbox" id="confirmation-checkbox" name="confirmation-text" value="Yes">
+        <label for="confirmation-checkbox" class="confirmation-text">I hereby confirm that the above check was confirmed and the required escalations processed.</label>
+    </div>
 
     <!-- Button container with Save & Submit button -->
     <div class="button-container">
-        <button type="submit">Save & Submit</button>
+        <button type="submit">Submit</button>
     </div>
 
     <!-- JavaScript function to toggle the display of escalation details -->

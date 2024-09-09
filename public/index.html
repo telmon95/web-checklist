@@ -31,8 +31,8 @@
         <input type="date" name="date" id="date">
 
         <!-- Select options for Room Number -->
-        <label for="title">Room Number</label>
-        <select name="technicianName" id="technicianName">
+        <label for="roomNumber">Room Number</label>
+        <select name="roomNumber" id="roomNumber">
             <option value="" disabled selected>Select option</option>
             <option value="Auditorium">Auditorium</option>
             <option value="GM3">GM3</option>
@@ -92,7 +92,7 @@
         </div>
 
         <!-- Submit button for sending and escalating -->
-        <button type="submit" id="sendEscalateButton">Send & Escalate</button>
+        <button type="button" id="sendEscalateButton">Send & Escalate</button>
     </form>
 
     <!-- Checklist Confirmation Section -->
@@ -110,7 +110,7 @@
     <!-- Confirmation text -->
     <p>Hereby confirm that the above check was confirmed and the required escalations processed.</p>
 
-    <!-- Button container with Save & Close button -->
+    <!-- Button container with Save & Submit button -->
     <div class="button-container">
         <button type="submit">Save & Submit</button>
     </div>
@@ -129,7 +129,11 @@
                 sendEscalateButton.style.display = 'none'; // Hide Send & Escalate button
             }
         }
-    </script>
 
+        document.getElementById('sendEscalateButton').addEventListener('click', function() {
+            window.open('https://oneinvestec.service-now.com/', '_blank'); // Redirection
+        });
+    </script>
+    
 </body>
 </html>

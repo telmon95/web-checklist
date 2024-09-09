@@ -27,7 +27,7 @@
         <input type="date" name="date" id="date">
 
         <!-- Input field for entering the title of the checklist -->
-        <label for="title">Checklist Title</label>
+        <label for="title">Room Number</label>
         <input type="text" name="title" id="title" placeholder="Enter Title">
 
         <h2>Checks Performed</h2>
@@ -82,7 +82,7 @@
         </div>
 
         <!-- Submit button for sending and escalating -->
-        <button type="submit">Send & Escalate</button>
+        <button type="submit" id="sendEscalateButton">Send & Escalate</button>
     </form>
 
     <!-- Checklist Confirmation Section -->
@@ -109,13 +109,18 @@
     <script>
         function toggleTextbox(value) {
             const textboxContainer = document.getElementById('textbox-container');
+            const sendEscalateButton = document.getElementById('sendEscalateButton');
+            
             if (value === 'Yes') {
-                textboxContainer.style.display = 'block'; // Show details container
+                textboxContainer.style.display = 'block'; // Show escalation details container
+                sendEscalateButton.style.display = 'inline-block'; // Show Send & Escalate button
             } else {
-                textboxContainer.style.display = 'none'; // Hide details container
+                textboxContainer.style.display = 'none'; // Hide escalation details container
+                sendEscalateButton.style.display = 'none'; // Hide Send & Escalate button
             }
         }
     </script>
+
 
 </body>
 </html>
